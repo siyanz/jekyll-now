@@ -1,7 +1,7 @@
 ---
 layout: post
 title: You're up and running!
-year:
+year: 2016
 categories: [Design, UI]
 resources: 
  - resource: Video
@@ -11,6 +11,11 @@ resources:
 tagline: 
 color: red
 preview: /images/config.png
+teammates:
+ - name: Julia Teitelbaum
+   external-url: http://julia-t.com/
+ - name: Russell Andrews
+   external-url: http://russell-andrews.com/
 ---
 
 Next you can update your site name, avatar and other options using the _config.yml file in the root of your repository (shown below).

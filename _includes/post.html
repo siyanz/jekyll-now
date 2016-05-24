@@ -1,14 +1,23 @@
 <div class="page-header">
-  <h1>{{ page.title }} {% if page.tagline %}<small>{{page.tagline}}</small>{% endif %}</h1>
+  <h1>{{ page.title }} {% if page.year %}<small>{{page.year}}</small>{% endif %}</h1>
+  {% if page.teammates %}
+  <small>
+  	{% for mate in page.teammates %}
+  	<a href="{{ mate.external-url }}">{{ mate.name }}</a>{% unless forloop.last %},{% endunless %}
+  	{% endfor %}
+	</small>
+	{% endif %}
+
 </div>
 	
 <article class="row">
-
 	<div class="col-sm-10">
+		<div class="hero-img">
+			<img url="">
+		</div>
 	  <div class="article_body">
 	  {{ content }}
 	  </div>
-
 		<hr>
 	</div>
 	<div class="col-sm-2 vert-prog">
