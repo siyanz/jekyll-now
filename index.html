@@ -4,37 +4,39 @@ tagline:
 ---
 {% for post in site.posts %}
 
-<article class="home">
+<article class="entry row">
+<div class="col-sm-12">
 
-  <span class="post-date">
-    {% assign d = post.date | date: "%d" | plus:'0' %}
-    {{ post.date | date: "%B" }}
-    {% case d %}
-    {% when 1 or 21 or 31 %}{{ d }}st,
-    {% when 2 or 22 %}{{ d }}nd,
-    {% when 3 or 23 %}{{ d }}rd,
-    {% else %}{{ d }}th,
-    {% endcase %}
-    {{ post.date | date: "%Y" }}
-  </span>
-
-  <h2>
-    <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-  </h2>
-
-  <div>
-    {% if post.fullview %}
-    {{ post.content }}
-    {% else %}
-    {% if post.shortinfo %}
-    {{ post.shortinfo }}
-    {% elsif post.description %}
-    {{ post.description }}
-    {% else %}
-    {{ post.excerpt }}
-    {% endif %}
-    {% endif %}
+  <div class="col-sm-8">
+    <div class="index-img">
+      <a href="{{ site.baseurl }}{{ post.url }}">
+        <img src="{{ post.preview | prepend: site.baseurl }}">
+      </a>
+    </div>
   </div>
 
+  <div class="col-sm-4">
+    <div class="info">
+      <h2>
+        <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+      </h2>
+
+      <div class="blurb">
+        {% if post.fullview %}
+        {{ post.content }}
+        {% else %}
+        {% if post.shortinfo %}
+        {{ post.shortinfo }}
+        {% elsif post.description %}
+        {{ post.description }}
+        {% else %}
+        {{ post.excerpt }}
+        {% endif %}
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
+</div>
 </article>
 {% endfor %}

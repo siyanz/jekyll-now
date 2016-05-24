@@ -9,18 +9,11 @@ name: Siyan Zhao
 description: Project database of Siyan Zhao
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
-avatar: 
+avatar: http://placekitten.com/180/180
 
 #
 # Flags below are optional
 #
-
-defaults: 
-  -
-    scope: 
-      path: ""
-    values:
-      title: Welcome
 
 # Includes an icon in the footer for each username you enter
 footer-links:
