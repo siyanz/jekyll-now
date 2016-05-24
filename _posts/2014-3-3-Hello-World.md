@@ -3,9 +3,13 @@ layout: post
 title: You're up and running!
 year:
 categories: [Design, UI]
-Resources:
+resources: 
+ - resource: Video
+   external-url: http://www.siyanz.com
+ - resource: Paper
+   external-url: http://www.siyanz.com
 tagline: 
-color: yellow
+color: red
 preview: /images/config.png
 ---
 

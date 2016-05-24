@@ -14,7 +14,7 @@
 // Title font
 @import url(https://fonts.googleapis.com/css?family=Merriweather);
 // Content font
-@import url(https://fonts.googleapis.com/css?family=Josefin+Sans);
+@import url(https://fonts.googleapis.com/css?family=Josefin+Sans:400,700,600);
 
 // Default.html
 body{
@@ -54,8 +54,10 @@ a.nav-link:hover { color: #777; }
 
 .text-left {
   text-align: left;
-  width: 70%;
-  margin: 0 auto;
+}
+
+.text-right {
+  text-align: right;
 }
 
 .fixed-navbar {
@@ -101,7 +103,6 @@ a.nav-link:hover { color: #777; }
     background-size: 100% 100%; 
   }
 }
-
 
 article{
   margin-bottom: 40px;
@@ -189,11 +190,6 @@ article.entry {
 }
 
 .info {
-  // background: #afe8ec; /* For browsers that do not support gradients */
-  // background: -webkit-linear-gradient(left, #afe8ec , rgba(0,0,0,0)); /* For Safari 5.1 to 6.0 */
-  // background: -o-linear-gradient(right, #afe8ec, rgba(0,0,0,0)); /* For Opera 11.1 to 12.0 */
-  // background: -moz-linear-gradient(right, #afe8ec, rgba(0,0,0,0)); /* For Firefox 3.6 to 15 */
-  // background: linear-gradient(to right, #afe8ec , rgba(0,0,0,0)); /* Standard syntax */
   padding-top: 5px;
   padding-right: 0px;
   overflow: auto;
@@ -239,9 +235,33 @@ article.entry {
   margin-bottom: 10px;
 }
 
+.post-det {
+  width: 60%;
+  margin: 0 auto;
+}
+
 .categories p{
   margin: 0;
 }
+
+.top-divider {
+  border: none;
+  height: 4px;
+  width: 50%;
+  margin-right: 0;
+  margin-bottom: 10px;
+}
+
+.divider {
+  background-color: #ccc;
+  width: 35%;
+  border: none;
+  height: 1px;
+  margin-right: 0;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
 // Post
 .page-header {
   color: #3E3E3E;

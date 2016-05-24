@@ -15,8 +15,8 @@
 {% endif %}
 
 {% if page.color %}
-<div class="text-left">
-<hr class="top-divider" style="color:{{ page.color }};">
+<div class="post-det text-right">
+<hr class="top-divider" style="background-color:{{ page.color }};">
 
 {% if page.categories %}
 {% unless page.categories == empty %}
@@ -38,6 +38,19 @@
   {% endif %}
 </ul>
 {% endunless %}
+{% endif %}
+
+<hr class="divider">
+
+{% if page.resources %}
+<ul class="list-unstyled categories">
+  <li><p class="bold">Resources</p></li>
+	{% for res in page.resources %} 
+		<li><a href= "{{ res.external-url }}">
+			<p>{{ res.resource }}</p>
+		</a></li>
+	{% endfor %}
+</ul>
 {% endif %}
 </div>
 {% endif %}
