@@ -11,11 +11,10 @@ resources:
    external-url: https://dl.dropboxusercontent.com/u/105925935/Siggraph_poster_v6-01.png 
 color: "#B165A3"
 preview: /images/FE/teaser.png
+slideshow: /images/FE/slides
 teammates:
- - name: Ali Israr
-   external-url: www.aliisrar.info/
- - name: Roberta Klatzky
-   external-url: https://scholar.google.com/citations?user=wUPKh58AAAAJ
+ - name: aliIsrar
+ - name: rKlatzky
 ---
 
 ### Project Description
