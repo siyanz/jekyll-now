@@ -13,7 +13,7 @@ color: "#B165A3"
 preview: /images/FE/teaser.png
 slideshow: /images/FE/slides
 teammates:
- - name: aliIsrar
+ - name: aIsrar
  - name: rKlatzky
 ---
 

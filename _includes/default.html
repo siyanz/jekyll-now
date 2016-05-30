@@ -15,6 +15,20 @@
     <link href="{{ site.baseurl }}/style.css" type="text/css" rel="stylesheet">
     <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
 
+    {% if page.color %}
+    <style type="text/css">
+     .main a {
+        color: {{ page.color }};
+        font-weight: 600;
+     }
+
+     article a:hover, article a:focus{
+        color: {{ page.color }};
+        text-decoration: underline;
+      }
+     </style>
+    {% endif %}
+
     <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
   </head>
 
@@ -25,7 +39,6 @@
       <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header">
         <a class="navbar-brand" href="{{ site.baseurl }}/">
-          <img src="{{ site.avatar }}" class="img-circle" />
           {{ site.name }}
         </a>
         <div>

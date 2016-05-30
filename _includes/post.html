@@ -1,6 +1,6 @@
 	
 <article class="row">
-	<div class="col-sm-10">
+	<div class="col-sm-10 main">
 		<div class="page-header">
 		  <h1>{{ page.title }}</h1>
 		  {% if page.teammates %}
@@ -8,16 +8,22 @@
 			  {% if page.year %}{{ page.year }}{% endif %} | 
 		  	{% for mate in page.teammates %}
 		  	{% assign person = site.data.people[mate.name] %}
-		  	<a href="{{ person.website }}">{{ person.name }}</a>{% unless forloop.last %},{% endunless %}
+		  	<a href="{% if person.website %}{{ person.website }}{% endif %}">{{ person.name }}</a>{% unless forloop.last %},{% endunless %}
 		  	{% endfor %}
 			</p>
 			{% endif %}
 		</div>
 
-		{% if page.vid %}
-
+		{% if page.video %}
+		<div class="video">
+			<iframe src="{{ page.video }}" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+		</div>
 		{% else %}
-			{% if page.preview %}
+			{% if page.hero-img %}
+			<div class="hero-img">
+				<img src="{{ page.hero-img | prepend: site.baseurl }}">
+			</div>
+			{% else %}
 			<div class="hero-img">
 				<img src="{{ page.preview | prepend: site.baseurl }}">
 			</div>
@@ -61,9 +67,9 @@
 		{% endunless %}
 		{% endif %}
 
-		<hr class="divider">
 
 		{% if page.resources %}
+		<hr class="divider">
 		<ul class="list-unstyled categories">
 		  <li><p class="bold">Resources</p></li>
 			{% for res in page.resources %} 
