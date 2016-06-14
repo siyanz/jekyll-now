@@ -30,3 +30,6 @@ From the first study, we calculated the parameter values that the majority of th
 In our second study, we also paired synonyms of words from the first study with their corresponding feel effects. This can effectively broaden the haptic vocabularies. Results from the second user study showed that people can associate the feel effects from study one with their underlying semantic meanings. In other words, people can "comprehend" the feel effects just like how they can understand words when prompted.
 
 The two user studies suggested future opportunities to integrate feel effects with movies, games and so on for richer entertainment experience.
+
+
+{% include slideshow.html %}
