@@ -65,6 +65,10 @@ body{
 .content {
   padding-top: $menuPadding;
   padding-left: 20px;
+
+  @media only screen and (max-width: 768px) {
+    padding-top: $menuPaddingDevice;
+  }
 }
 
 a.nav-link {
@@ -90,11 +94,43 @@ a.nav-link:hover { color: #777; }
 }
 
 .fixed-navbar {
-  width: 100%;
-  background: white;
-  top: 0;
-  left: 0;
-  // border-top: solid #FF8C00 8px;
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+    background: white;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    position: fixed;
+    // border-bottom: solid #FF8C00 1px;
+    box-shadow: 0px 0px 2px #888888;
+  }
+}
+
+.navbar-brand-div {
+  margin-top: 50px;
+}
+
+.navbar-brand {
+  font-family: 'Josefin Sans', sans-serif;
+  margin-top: 5px;
+  font-size: 2.5em;
+  float: none;
+  padding: 20px 25px 15px 25px;
+
+  @media only screen and (min-width: 768px) {
+    border-radius: 35px;
+    background-color: #FF8C00;
+    color: white;
+
+    &:hover {
+      color: white;
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    float: left;
+    font-size: 1.5em;
+  }
 }
 
 // Nav
@@ -104,7 +140,9 @@ a.nav-link:hover { color: #777; }
   margin-top: 20px;
   margin-left: auto;
   margin-right: auto;
-  padding: 5px 20px;
+  padding-top: 10px; 
+  padding-left: 20px;
+  padding-right: 20px;
   // padding-bottom: 0;
   font-family: 'Josefin Sans', sans-serif;
   font-weight: 600;
@@ -125,19 +163,12 @@ a.nav-link:hover { color: #777; }
   padding: 15px 30px;
   padding-bottom: 0;
   }
-  // li:hover {    
-  //   background-image: url("/images/menuBg.png");
-  //   background-size: 100% 100%; 
-  //   a {      
-  //     text-decoration: none;
-  //     color: #fff;
-  //   }
-  // }
   a {
     color: #554E47;
     padding: 10px 10px 5px 10px;
   }
 }
+
 
 article{
   margin-bottom: 40px;
@@ -210,6 +241,18 @@ article.entry {
   }
   .col-sm-5 {
     padding-right: 0;
+  }
+
+  @media only screen and (max-width: 768px) {
+    margin-bottom: 30px;
+
+    .col-sm-5 {
+    padding-right: 15px;
+    }
+
+    .info {
+      padding-top: 10px;
+    }
   }
 }
 
@@ -372,11 +415,7 @@ article.entry {
     color: white;
   }
 }
-// @media only screen and (min-width: 768px) {
-//     .page-header{
-//         margin-right: 70px;
-//     }
-// }
+
 
 // Misc
 .misc {
@@ -429,21 +468,36 @@ footer {
 
 .badge { background: #F2756A; }
 
-#nav-menu{
-    position: fixed;
-    top: 45px;
-    right: 45px;
-    z-index: 2000;
-}
-#nav-menu .dropdown-menu {
+.dropdown-menu {
     left: inherit;
     right: 0px;
+    border: none;
 }
 
 ul.dropdown-menu>li>a>i.fa {
     width: 1.3em;
 }
 
+.navbar-toggle {
+  margin-top: 10px;
+  border-radius: 20px;
+  padding: 8px 12px;
+  background-color: #FF8C00;
+  border: none;
+
+  i {
+    color: white;
+  }
+}
+
+.navbar-toggle:hover, .navbar-toggle:focus {
+    border: none;
+    background-color: #eee;
+    padding: 8px 12px;
+    i {
+      color: #FF8C00;
+    }
+}
 
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start

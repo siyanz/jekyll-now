@@ -35,19 +35,21 @@
   <body>
   <div class="container-fluid">
     <!-- Navbar for collapsed view ONLY -->
-    <nav class="navbar navbar-default visible-xs" role="navigation">
+    <nav class="fixed-navbar visible-xs" role="navigation">
       <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header">
-        <a class="navbar-brand" href="{{ site.baseurl }}/">
-          {{ site.name }}
-        </a>
+          <a class="navbar-brand" href="{{ site.baseurl }}/">
+            {{ site.name }}
+          </a>
         <div>
-          <button type="button" class="navbar-toggle btn btn-default dropdown-toggle" data-toggle="dropdown">
+          <button type="button" class="navbar-toggle btn" data-toggle="dropdown">
             <i class="fa fa-bars"></i>
           </button>
           <ul class="dropdown-menu" role="menu">
-            <li><a href="{{ site.baseurl}}/"><i class="fa fa-home"></i>Home</a></li>
-            <li><a href="{{ site.baseurl}}/{{ site.tags_path }}"><i class="fa fa-tags"></i>Tags</a></li>
+              <li><a href="{{ site.baseurl }}/">Home</a></li>
+              <li><a href="{{ site.baseurl }}/about/">About Me</a></li>
+              <li><a href="{{ site.baseurl }}/resume/">Resume</a></li>
+              <li><a href="{{ site.baseurl }}/categories.html">Categories</a></li>
             <li class="divider"></li>
             <li><a href="#"><i class="fa fa-arrow-up"></i>Top of Page</a></li>
           </ul>
@@ -57,15 +59,18 @@
 
     <div class="row">
       <div class="col-sm-12 text-center hidden-xs navbar" role="navigation">
-        <div class="fixed-navbar">
-          <nav id="main-nav">
-            <ul>
-              <li><a href="{{ site.baseurl }}/">Home</a></li>
-              <li><a href="{{ site.baseurl }}/about/">About Me</a></li>
-              <li><a href="{{ site.baseurl }}/resume/">Resume</a></li>
-            </ul>
-          </nav>
+        <div class="navbar-brand-div">
+          <a class="navbar-brand" href="{{ site.baseurl }}/">
+            S
+          </a>
         </div>
+        <nav id="main-nav">
+          <ul>
+            <li><a href="{{ site.baseurl }}/">Home</a></li>
+            <li><a href="{{ site.baseurl }}/about/">About Me</a></li>
+            <li><a href="{{ site.baseurl }}/resume/">Resume</a></li>
+          </ul>
+        </nav>
       </div>
 
       <div class="col-sm-8 content col-sm-offset-2">
